@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments</title>
+    <link rel="icon" type="image/png" href="/images/cse_icon.png">
+    <script>
+        class MyHelloWorld extends HTMLElement {
+            constructor() {
+                super();
+                console.log("Hello world! (from <my-hello-world>)");
+            }
+        }
+
+        customElements.define("my-hello-world", MyHelloWorld);
+    </script>
+    <style>
+        header, nav, main, section, article, footer {
+            border: 1px solid #ccc;
+        } 
+        my-custom-title {
+            display: block;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: rgb(127, 197, 255);
+            fill: aliceblue;
+            max-width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        
+        <my-custom-title>
+            <h1>
+                <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true" role="img">
+                    <circle cx="16" cy="16" r="14"></circle>
+                </svg>
+                    Experiments
+                <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true" role="img">
+                    <circle cx="16" cy="16" r="14"></circle>
+                </svg>
+            </h1>
+        </my-custom-title>
+
+        <nav aria-label="Primary">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="experiments.html" aria-current="page">Experiments</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 id="media-picture">Picture (with Source)</h2>
+            <p>This demo swaps images at 800px+ using <code>&lt;source&gt;</code> inside <code>&lt;picture&gt;</code>.</p>
+
+            <picture>
+                <source srcset="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3NodXR0ZXJzdG9jay0yMjc4Nzc2MTg3LWhlcm8uanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9LCJ0b0Zvcm1hdCI6ImF2aWYifX0=" media="(min-width: 800px)" type="image/jpeg">
+                <img src="/images/cats.jpg" alt="Placeholder image demonstrating the picture/source elements" width="400" height="200">
+            </picture>
+        </section>
+
+        <section>
+            <h2 id="media-audio">Audio (with Source)</h2>
+            <p><u> Two of my favorite Minecraft soundtracks:</u></p>
+
+            <p>
+                Mice on Venus from Minecraft - Volume Alpha by C418
+            </p>
+            <audio controls>
+                <source src="/media/Mice_On_Venus.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+
+            <p>
+                Moog City from Minecraft - Volume Beta by C418
+            </p>
+            <audio controls>
+                <source src="/media/Moog_City.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section>
+            <h2 id="media-video">Video (with Source)</h2>
+            <p>Below is a video of my trip to the Japanese Tea Garden in <em>San Francisco, CA.</em></p>
+
+            <video controls width="360">
+                <source src="/media/japanese_tea_garden.mp4" type="video/mp4">
+                Your browser does not support the video tag, or <code>media/sample.mp4</code> is not present.
+            </video>
+        </section>
+
+        <section>
+            <h2 id="media-canvas">Canvas (tiny JS demo)</h2>
+            <p>Allowed some JS: draw a simple rectangle to show the API.</p>
+
+            <canvas id="demoCanvas" width="240" height="120"></canvas>
+            <script>
+                const ctx = document.getElementById('demoCanvas').getContext('2d');
+                ctx.fillStyle = '#99ccff';
+                ctx.fillRect(20, 20, 200, 80);
+                ctx.fillStyle = '#000';
+                ctx.font = '14px sans-serif';
+                ctx.fillText('Canvas demo', 85, 80);
+            </script>
+        </section>
+
+        <section>
+            <h2 id="tmpl">Template (no-JS for now)</h2>
+            <p>
+                The template below is hidden. In a later assignment, JavaScript can clone and insert it into the page.
+            </p>
+
+            <template id="cardTemplate">
+                <article>
+                <h3>Templated Card</h3>
+                <p>This content lives in a &lt;template&gt; and is not displayed until cloned.</p>
+                </article>
+            </template>
+
+            <p><em>Note:</em> Template content not visible for this assignment.</p>
+        </section>
+
+        <section>
+            <h2 id="extra-credit">Extra Credit: MathML — Einstein’s Formula</h2>
+
+            <math display="block">
+                <mrow>
+                    <mi>E</mi>
+                    <mo>=</mo>
+                    <mi>m</mi>
+                    <msup>
+                        <mi>c</mi>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+            </math>
+            <br>
+        </section>
+        <my-hello-world></my-hello-world>
+    </main>
+    <noscript>
+        <p><strong>Note:</strong> This site works best with JavaScript enabled. Some features may not display correctly.</p>
+    </noscript>
+    <footer>
+        <p>© 2025 Hisham Baobaid • Hosted on Netlify • Validated via W3C HTML Validator</p>
+    </footer>
+
+</body>
+</html>
