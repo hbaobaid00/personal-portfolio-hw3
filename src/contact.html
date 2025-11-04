@@ -15,11 +15,13 @@
 
         customElements.define("my-hello-world", MyHelloWorld);
     </script>
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         header, nav, main, section, article, footer {
-            border: 1px solid #ccc;
+            /* border: 1px solid #ccc; */
+            text-align: center;
         }
-        my-custom-title {
+        /* my-custom-title {
                 display: block;
                 text-align: center;
                 padding: 20px;
@@ -28,7 +30,7 @@
                 background-color: rgb(127, 197, 255);
                 fill: aliceblue;
                 max-width: 100%;
-        }
+        } */
     
     </style>
 
@@ -53,7 +55,6 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" aria-current="page">Contact</a></li>
                 <li><a href="resume.html">Resume</a></li>
-                <li><a href="experiments.html">Experiments</a></li>
             </ul>
         </nav>
     </header>
@@ -72,45 +73,41 @@
                     <legend>Send Me a Message!</legend>
 
                     <p>
-                        <label for="name">Name</label><br>
+                        <label for="name">Name:</label><br>
                         <input id="name" name="name" type="text" placeholder="John Smith" required>
                     </p>
 
                     <p>
-                        <label for="email">Email</label><br>
+                        <label for="email">Email:</label><br>
                         <input id="email" name="email" type="email" placeholder="userid@domain.com" required>
                     </p>
 
                     <p>
-                        <label for="topic">Topic</label><br>
+                        <label for="topic">Topic:</label><br>
                         <input id="topic" name="topic" type="text" placeholder="Project / Question" required>
                     </p>
 
                     <p>
-                        <label for="msg">Message</label><br>
+                        <label for="msg">Message:</label><br>
                         <textarea id="msg" name="message" rows="4" cols="30" placeholder="Write message here..."></textarea>
                     </p>
+                    <div class="FormCenter">
+                        <p>
+                            <label><input type="file"></label>
+                        </p>
 
-                    <p>
-                        <label><input type="file"></label>
-                    </p>
+                        <progress value="0" max="4">0%</progress>
 
-                    <progress value="0" max="4">0%</progress>
+                        <p>
+                            <label><input type="checkbox" name="subscribe" value="yes"> Subscribe to updates</label>
+                        </p>
 
-                    <p>
-                        <label><input type="checkbox" name="subscribe" value="yes"> Subscribe to updates</label>
-                    </p>
-
-                    <p>
-                        <button type="submit">Send</button>
-                    </p>
+                        <p>
+                            <button type="submit">Send</button>
+                        </p>
+                    </div>
                 </fieldset>
             </form>
-
-            <!-- Static dialog (demo only, no JS needed for HW2) -->
-            <dialog open>
-                This is a dialog box.
-            </dialog>
         </section>
 
         <my-hello-world></my-hello-world>

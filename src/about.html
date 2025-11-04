@@ -15,11 +15,13 @@
 
         customElements.define("my-hello-world", MyHelloWorld);
     </script>
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         header, nav, main, section, article, footer {
-            border: 1px solid #ccc;
+            /* border: 1px solid #dc3030; */
+            text-align: center;
         } 
-        my-custom-title {
+        /* my-custom-title {
             display: block;
             text-align: center;
             padding: 20px;
@@ -28,7 +30,7 @@
             background-color: rgb(127, 197, 255);
             fill: aliceblue;
             max-width: 100%;
-        }
+        } */
     </style>
 
 </head>
@@ -52,7 +54,6 @@
                 <li><a href="about.html" aria-current="page">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="resume.html">Resume</a></li>
-                <li><a href="experiments.html">Experiments</a></li>
             </ul>
         </nav>
     </header>
@@ -66,10 +67,12 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is <strong>Hisham Baobaid</strong>, and I am a passionate developer with interests in web development, software engineering, and technology innovation. 
                     I love creating projects that solve real-world problems and enhance user experiences. <br>
                 </p>
-                <img src="/images/me/birthday_photo.png" alt="Picture of Hisham Baobaid on his birthday" width="300">
-                <img src="/images/me/photoOfME.jpeg" alt="Picture of Hisham Baobaid" width="225">
-                <img src="/images/me/photoOfMe_desert.jpeg" alt="Picture of Hisham Baobaid in the desert" width="225">
-                <img src="/images/me/photoOfMe_balboa.jpeg" alt="Picture of Hisham Baobaid at Balboa Park" width="225">
+                <section class="photos">
+                    <img src="/images/me/birthday_photo.png" alt="Picture of Hisham Baobaid on his birthday" width="300">
+                    <img src="/images/me/photoOfME.jpeg" alt="Picture of Hisham Baobaid" width="225">
+                    <img src="/images/me/photoOfMe_desert.jpeg" alt="Picture of Hisham Baobaid in the desert" width="225">
+                    <img src="/images/me/photoOfMe_balboa.jpeg" alt="Picture of Hisham Baobaid at Balboa Park" width="225">
+                </section>
             </section>
             <section id="background">
                 <h3>My Background</h3>
@@ -83,6 +86,7 @@
                         We programmed the motor's and sensors of the robot using VEXcode, which is based on Python. I found it particularly fascinating how lines of code could control a physical machine.
                         From that point on, I was hooked and decided to pursue a career in technology.
                     </p>
+                    <img class="robotImage" src="/images/robotics.jpg" alt="Image of Robot">
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Because of VEX Robotics, I decided to further my knowledge in programming by taking computer science courses in high school and college. 
                         Fortunately, my high school offered a 3-year computer science pathway that taught me the fundamentals of programming and data structures. During my time in high school, I worked on several projects, including building simple games and web applications.
@@ -120,23 +124,22 @@
                 <ol>
                     <li>
                         <strong>Video Games:</strong> I love playing video games as they provide a great way to unwind and have fun. Some of my favorite games include "Super Smash Bros. Ultimate", "Super Mario Sunshine", "Fortnite", and "Minecraft".
-                        <div>
+                        <section class="photos">
                             <img src="/images/video_games/super_smash_bros.png" alt="Super Smash Bros. Ultimate" width="330">
                             <img src="/images/video_games/super_mario_sunshine.png" alt="Super Mario Sunshine" width="200">
                             <img src="/images/video_games/fortnite.png" alt="Fortnite" width="200">
                             <img src="/images/video_games/minecraft.png" alt="Minecraft" width="200">
-                        </div>
-                        <br>
+                        </section>
                     </li>
                 
                     <li>
                         <strong>Anime:</strong> I am an avid anime fan and enjoy watching series like "Naruto", "One Piece", "Demon Slayer", and "Jujutsu Kaisen". Anime offers a unique blend of storytelling, art, and culture that I find captivating.
-                        <div>
+                        <section class="photos">
                             <img src="/images/anime/naruto.png" alt="Naruto" width="300">
                             <img src="/images/anime/one_piece.png" alt="One Piece" width="400">
                             <img src="/images/anime/demon_slayer.jpg" alt="Demon Slayer" width="170">
                             <img src="/images/anime/jujutsu_kaisen.jpg" alt="Jujutsu Kaisen" width="150">
-                        </div>
+                        </section>
                         <br>
                     </li>
                     <li>
